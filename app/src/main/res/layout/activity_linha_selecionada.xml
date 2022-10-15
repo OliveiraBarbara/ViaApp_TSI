@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LinhaSelecionada"
+    android:background="#00687C">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="415dp"
+        android:layout_height="650dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_view_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lMenu" />
+
+    <TextView
+        android:id="@+id/lValorPassagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="Valor da Passagem: R$"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHorario2" />
+
+    <Button
+        android:id="@+id/btnVerRota"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#B0ECFF"
+        android:drawableLeft="@drawable/rota"
+        android:text="Ver Rota"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#001F27"
+        android:textSize="20sp"
+        android:theme="@style/Theme.Material3.DynamicColors.DayNight"
+        app:iconSize="30dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lValorPassagem"
+        app:strokeColor="#001F27" />
+
+    <TextView
+        android:id="@+id/txtPonto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/proximo"
+        android:text="Estação Mogi das Cruzes"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lPontosDesembarque" />
+
+    <TextView
+        android:id="@+id/txtPonto2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/proximo"
+        android:text="Estação Braz Cubas"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPonto" />
+
+    <TextView
+        android:id="@+id/txtPonto3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/proximo"
+        android:text="Estação Jundiapeba"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPonto2" />
+
+    <TextView
+        android:id="@+id/txtPonto4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/proximo"
+        android:text="Estação Suzano"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPonto3" />
+
+    <TextView
+        android:id="@+id/txtHorario1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/proximo"
+        android:text="4h40 às 00h10"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lHorarioFuncionamento" />
+
+    <TextView
+        android:id="@+id/txtHorario2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/proximo"
+        android:text="Todos os dias"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHorario1" />
+
+    <TextView
+        android:id="@+id/lPontosDesembarque"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Pontos de Desembarque:"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lEstacaoInicial" />
+
+    <TextView
+        android:id="@+id/lHorarioFuncionamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Horário de Funcionamento:"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPonto4" />
+
+    <TextView
+        android:id="@+id/txtEstacaoInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Estudantes"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/lEstacaoInicial"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/txtValorPassagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="4,90"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/lValorPassagem"
+        app:layout_constraintTop_toBottomOf="@+id/txtHorario2" />
+
+    <TextView
+        android:id="@+id/lEstacaoInicial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="Estação Inicial:"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="417dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_view_inferior_border"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerRota"
+        app:strokeColor="#001F27"
+        app:strokeWidth="1dp" />
+
+    <Button
+        android:id="@+id/btnPerfil"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Perfil"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#00687C"
+        android:textSize="16sp"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/perfil_usuario"
+        app:iconGravity="textTop"
+        app:iconSize="30dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerRota"
+        app:strokeWidth="0dp" />
+
+    <Button
+        android:id="@+id/btnMenu"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Menu"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="#00687C"
+        android:textSize="16sp"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/botao_inicio"
+        app:iconGravity="textTop"
+        app:iconSize="30dp"
+        app:iconTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerRota"
+        app:strokeWidth="0dp" />
+
+    <TextView
+        android:id="@+id/lMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Linha Laranja"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

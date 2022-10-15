@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sobre"
+    android:background="#00687C">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="411dp"
+        android:layout_height="650dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_view_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lMenu" />
+
+    <Button
+        android:id="@+id/btnMenu2"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#00687C"
+        android:contentDescription="@string/app_name"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/img_menu"
+        app:iconGravity="textTop"
+        app:iconSize="40dp"
+        app:iconTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp" />
+
+    <TextView
+        android:id="@+id/lNomeApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="TransApp"
+        android:textColor="#003D50"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/lTextoSobre"
+        android:layout_width="270dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="30dp"
+        android:text="Este aplicativo visa auxiliar pessoas que utilizam o transporte público a consultarem informações como linhas dos transportes, horários e pontos de paradas de cada transporte."
+        android:textAlignment="center"
+        android:textColor="#003D50"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lNomeApp" />
+
+    <TextView
+        android:id="@+id/lTextoDesenvolvido"
+        android:layout_width="270dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="40dp"
+        android:text="Desenvolvido por Alex Sander Santana de Araujo Junior &amp; Bárbara Beatriz Bueno de Oliveira"
+        android:textAlignment="center"
+        android:textColor="#003D50"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lTextoSobre" />
+
+    <TextView
+        android:id="@+id/lMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Sobre"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lTextoVersao"
+        android:layout_width="270dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Versão: 2022.10"
+        android:textAlignment="center"
+        android:textColor="#003D50"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lTextoDesenvolvido" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
