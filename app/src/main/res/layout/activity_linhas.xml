@@ -15,7 +15,7 @@
 
         <View
             android:id="@+id/view"
-            android:layout_width="421dp"
+            android:layout_width="0dp"
             android:layout_height="590dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/edit_view_border"
