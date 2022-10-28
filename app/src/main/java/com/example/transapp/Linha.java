@@ -8,16 +8,16 @@ public class Linha {
     private double valorPassagem;
     private String rota;
     private ArrayList<String> pontosParada;
-    private Date inicio;
-    private Date fim;
+    private String horarioFuncionamento;
+    private String diasFuncionamento;
 
-    public Linha(String nome, double valorPassagem, String rota, ArrayList<String> pontosParada, Date inicio, Date fim) {
+    public Linha(String nome, double valorPassagem, String rota, ArrayList<String> pontosParada, String horarioFuncionamento, String diasFuncionamento) {
         this.nome = nome;
         this.valorPassagem = valorPassagem;
         this.rota = rota;
         this.pontosParada = pontosParada;
-        this.inicio = inicio;
-        this.fim = fim;
+        this.horarioFuncionamento = horarioFuncionamento;
+        this.diasFuncionamento = diasFuncionamento;
     }
 
     public String getNome() {
@@ -52,19 +52,19 @@ public class Linha {
         this.pontosParada = pontosParada;
     }
 
-    public Date getInicio() {
-        return inicio;
+    public String getHorarioFuncionamento() {
+        return horarioFuncionamento;
     }
 
-    public void setInicio(Date inicio) {
-        this.inicio = inicio;
+    public void setHorarioFuncionamento(String horarioFuncionamento) {
+        this.horarioFuncionamento = horarioFuncionamento;
     }
 
-    public Date getFim() {
-        return fim;
+    public String getDiasFuncionamento() {
+        return diasFuncionamento;
     }
 
-    public void setFim(Date fim) {
-        this.fim = fim;
+    public void setDiasFuncionamento(String diasFuncionamento) {
+        this.diasFuncionamento = diasFuncionamento;
     }
 }

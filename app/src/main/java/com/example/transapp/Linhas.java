@@ -3,6 +3,7 @@ package com.example.transapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -42,6 +43,8 @@ public class Linhas extends AppCompatActivity {
 
         this.listaLinhas.setAdapter(adaptador);
 
+        this.listaLinhas.setOnItemClickListener(new EscutadorLista());
+
         this.btnLinha1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,17 +54,14 @@ public class Linhas extends AppCompatActivity {
                 ArrayList<String> pontosParada = new ArrayList<String>();
                 pontosParada.add("A");
                 pontosParada.add("B");
-                Date inicio = new Date();
-                Date fim = new Date();
+                String horarioFuncionamento = "";
+                String diasFuncionamento = "";
 
-                Linha linha = new Linha(nome, valorPassagem, rota, pontosParada, inicio, fim);
+                Linha linha = new Linha(nome, valorPassagem, rota, pontosParada, horarioFuncionamento, diasFuncionamento);
 
                 linhas.add(linha);
 
                 adaptador.notifyDataSetChanged();
-
-                /*Intent i = new Intent(getApplicationContext(), LinhaSelecionada.class);
-                startActivity(i);*/
             }
         });
 
@@ -80,5 +80,13 @@ public class Linhas extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    private class EscutadorLista implements AdapterView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            /*Intent intent = new Intent(getApplicationContext(), LinhaSelecionada.class);
+            startActivity(intent);*/
+        }
     }
 }
