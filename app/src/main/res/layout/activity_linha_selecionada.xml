@@ -15,10 +15,11 @@
 
         <View
             android:id="@+id/view"
-            android:layout_width="415dp"
+            android:layout_width="0dp"
             android:layout_height="650dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/edit_view_border"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -200,13 +201,11 @@
             android:id="@+id/view2"
             android:layout_width="417dp"
             android:layout_height="82dp"
-            android:layout_marginTop="20dp"
             android:background="@drawable/edit_view_inferior_border"
             app:layout_constraintBottom_toBottomOf="@+id/view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnVerRota"
             app:strokeColor="#001F27"
             app:strokeWidth="1dp" />
 
@@ -215,7 +214,6 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="20dp"
             android:backgroundTint="#FFFFFF"
             android:text="Perfil"
             android:textAlignment="center"
@@ -227,8 +225,8 @@
             app:iconGravity="textTop"
             app:iconSize="30dp"
             app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnVerRota"
             app:strokeWidth="0dp" />
 
         <Button
@@ -236,7 +234,6 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="20dp"
             android:backgroundTint="#FFFFFF"
             android:text="Menu"
             android:textAlignment="center"
@@ -248,8 +245,8 @@
             app:iconGravity="textTop"
             app:iconSize="30dp"
             app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnVerRota"
             app:strokeWidth="0dp" />
 
         <TextView

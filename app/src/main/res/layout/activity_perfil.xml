@@ -15,10 +15,11 @@
 
         <View
             android:id="@+id/view"
-            android:layout_width="410dp"
-            android:layout_height="560dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/edit_view_border"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -71,14 +72,13 @@
 
         <View
             android:id="@+id/view2"
-            android:layout_width="417dp"
+            android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_marginTop="115dp"
             android:background="@drawable/edit_view_inferior_border"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPerfilTelefone"
             app:strokeColor="#001F27"
             app:strokeWidth="1dp" />
 
@@ -135,8 +135,8 @@
             app:iconGravity="textTop"
             app:iconSize="30dp"
             app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view2"
             app:strokeWidth="0dp" />
 
         <Button
@@ -155,8 +155,8 @@
             app:iconGravity="textTop"
             app:iconSize="30dp"
             app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view2"
             app:strokeWidth="0dp" />
 
         <TextView

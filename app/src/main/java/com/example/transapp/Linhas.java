@@ -5,8 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 public class Linhas extends AppCompatActivity {
 
@@ -17,6 +21,11 @@ public class Linhas extends AppCompatActivity {
     private Button btnLinha4;
     private Button btnMenu;
     private Button btnPerfil;
+    private ListView listaLinhas;
+
+    private ArrayList<Linha> linhas = new ArrayList<Linha>();
+
+    private AdapterLinhas adaptador;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,17 +34,34 @@ public class Linhas extends AppCompatActivity {
 
         this.txtBuscar = findViewById(R.id.txtBuscar);
         this.btnLinha1 = findViewById(R.id.btnLinhas);
-        this.btnLinha2 = findViewById(R.id.btnPerfil1);
-        this.btnLinha3 = findViewById(R.id.btnSobre);
-        this.btnLinha4 = findViewById(R.id.btnLinha4);
         this.btnMenu = findViewById(R.id.btnMenu);
         this.btnPerfil = findViewById(R.id.btnPerfil);
+        this.listaLinhas = findViewById(R.id.listaLinhas);
+
+        this.adaptador = new AdapterLinhas(this, this.linhas);
+
+        this.listaLinhas.setAdapter(adaptador);
 
         this.btnLinha1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), LinhaSelecionada.class);
-                startActivity(i);
+                String nome = "Teste";
+                double valorPassagem = 4.88;
+                String rota = "do ponto A ao B";
+                ArrayList<String> pontosParada = new ArrayList<String>();
+                pontosParada.add("A");
+                pontosParada.add("B");
+                Date inicio = new Date();
+                Date fim = new Date();
+
+                Linha linha = new Linha(nome, valorPassagem, rota, pontosParada, inicio, fim);
+
+                linhas.add(linha);
+
+                adaptador.notifyDataSetChanged();
+
+                /*Intent i = new Intent(getApplicationContext(), LinhaSelecionada.class);
+                startActivity(i);*/
             }
         });
 

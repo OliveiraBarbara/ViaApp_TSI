@@ -16,9 +16,10 @@
         <View
             android:id="@+id/view"
             android:layout_width="0dp"
-            android:layout_height="590dp"
+            android:layout_height="0dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/edit_view_border"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,14 +27,13 @@
 
         <View
             android:id="@+id/view2"
-            android:layout_width="417dp"
+            android:layout_width="0dp"
             android:layout_height="80dp"
-            android:layout_marginTop="85dp"
             android:background="@drawable/edit_view_inferior_border"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnLinha4"
             app:strokeColor="#001F27"
             app:strokeWidth="1dp" />
 
@@ -42,7 +42,6 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="85dp"
             android:backgroundTint="#FFFFFF"
             android:text="Perfil"
             android:textAlignment="center"
@@ -54,8 +53,8 @@
             app:iconGravity="textTop"
             app:iconSize="30dp"
             app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnLinha4"
             app:strokeWidth="0dp" />
 
         <Button
@@ -63,7 +62,6 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_marginTop="85dp"
             android:backgroundTint="#FFFFFF"
             android:text="Menu"
             android:textAlignment="center"
@@ -75,87 +73,17 @@
             app:iconGravity="textTop"
             app:iconSize="30dp"
             app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnLinha4"
             app:strokeWidth="0dp" />
-
-        <Button
-            android:id="@+id/btnLinha4"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            android:layout_width="330dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="#FFFFFF"
-            android:text="Linha Verde"
-            android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#001F27"
-            android:textSize="20sp"
-            app:cornerRadius="12dp"
-            app:icon="@drawable/right"
-            app:iconGravity="end"
-            app:iconSize="30dp"
-            app:iconTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnSobre"
-            app:strokeColor="#00687C" />
-
-        <Button
-            android:id="@+id/btnSobre"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            android:layout_width="330dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="#FFFFFF"
-            android:text="Linha Azul"
-            android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#001F27"
-            android:textSize="20sp"
-            app:cornerRadius="12dp"
-            app:icon="@drawable/right"
-            app:iconGravity="end"
-            app:iconSize="30dp"
-            app:iconTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnPerfil1"
-            app:strokeColor="#00687C" />
-
-        <Button
-            android:id="@+id/btnPerfil1"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            android:layout_width="330dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="15dp"
-            android:backgroundTint="#FFFFFF"
-            android:text="Linha Amarela"
-            android:textAlignment="textStart"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#001F27"
-            android:textSize="20sp"
-            app:cornerRadius="12dp"
-            app:icon="@drawable/right"
-            app:iconGravity="end"
-            app:iconSize="30dp"
-            app:iconTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnLinhas"
-            app:strokeColor="#00687C" />
 
         <Button
             android:id="@+id/btnLinhas"
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
-            android:layout_width="330dp"
+            android:layout_width="200dp"
             android:layout_height="70dp"
-            android:layout_marginTop="30dp"
             android:backgroundTint="#FFFFFF"
-            android:text="Linha Laranja"
+            android:text="Clique para adicionar"
             android:textAlignment="textStart"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#001F27"
@@ -165,10 +93,9 @@
             app:iconGravity="end"
             app:iconSize="30dp"
             app:iconTint="@null"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtBuscar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnPerfil"
+            app:layout_constraintStart_toEndOf="@+id/btnMenu"
             app:strokeColor="#00687C" />
 
         <TextView
@@ -201,6 +128,17 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/view" />
+
+        <ListView
+            android:id="@+id/listaLinhas"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBuscar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
