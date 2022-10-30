@@ -1,6 +1,7 @@
 package com.example.transapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,14 @@ public class AdapterLinhas extends ArrayAdapter<Linha> {
         Button btnLinha = itemView.findViewById(R.id.btnLinha);
 
         btnLinha.setText("Linha " + this.linhas.get(position).getNome());
+
+        btnLinha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, LinhaSelecionada.class);
+                context.startActivity(intent);
+            }
+        });
 
         return itemView;
     }
