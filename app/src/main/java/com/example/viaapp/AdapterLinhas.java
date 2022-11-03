@@ -1,4 +1,4 @@
-package com.example.transapp;
+package com.example.viaapp;
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "730393928411",
+    "project_id": "viaapp-b8164",
+    "storage_bucket": "viaapp-b8164.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730393928411:android:35e7ac897090709e5622fe",
+        "android_client_info": {
+          "package_name": "com.example.viaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730393928411-7fr187iv4lvbs61ekgg2ns1f5lk00q8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqo2fx8WiJqlvG7lOC7Vk8bqZ3bNUCHTs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730393928411-7fr187iv4lvbs61ekgg2ns1f5lk00q8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

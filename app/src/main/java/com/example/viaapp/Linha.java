@@ -1,7 +1,6 @@
-package com.example.transapp;
+package com.example.viaapp;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Linha {
     private String nome;

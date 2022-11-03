@@ -1,4 +1,4 @@
-package com.example.transapp;
+package com.example.viaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,6 +27,7 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Sobre.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -35,6 +36,7 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Perfil.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -43,6 +45,7 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Linhas.class);
                 startActivity(i);
+                finish();
             }
         });
 

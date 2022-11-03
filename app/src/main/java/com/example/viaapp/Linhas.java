@@ -1,4 +1,4 @@
-package com.example.transapp;
+package com.example.viaapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,6 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Linhas extends AppCompatActivity {
 
@@ -42,8 +41,6 @@ public class Linhas extends AppCompatActivity {
         this.adaptador = new AdapterLinhas(this, this.linhas);
 
         this.listaLinhas.setAdapter(adaptador);
-
-        this.listaLinhas.setOnItemClickListener(new EscutadorLista());
 
         this.btnLinha1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,13 +77,5 @@ public class Linhas extends AppCompatActivity {
                 startActivity(i);
             }
         });
-    }
-
-    private class EscutadorLista implements AdapterView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-            /*Intent intent = new Intent(getApplicationContext(), LinhaSelecionada.class);
-            startActivity(intent);*/
-        }
     }
 }

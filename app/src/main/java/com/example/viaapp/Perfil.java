@@ -1,4 +1,4 @@
-package com.example.transapp;
+package com.example.viaapp;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,6 +25,7 @@ public class Perfil extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Menu.class);
                 startActivity(i);
+                finish();
             }
         });
     }

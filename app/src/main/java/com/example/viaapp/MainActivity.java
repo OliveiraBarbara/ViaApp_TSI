@@ -1,4 +1,4 @@
-package com.example.transapp;
+package com.example.viaapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
