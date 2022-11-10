@@ -51,7 +51,6 @@ public class Linhas extends AppCompatActivity {
         this.listaLinhas = findViewById(R.id.listaLinhas);
 
 
-
         this.listaLinhas.setAdapter(adaptador);
 
         DatabaseReference dados = BD.child("linha");
