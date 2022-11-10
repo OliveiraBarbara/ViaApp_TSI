@@ -7,8 +7,18 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.firebase.ui.database.FirebaseListOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 
 import java.util.ArrayList;
 
@@ -27,6 +37,8 @@ public class Linhas extends AppCompatActivity {
 
     private AdapterLinhas adaptador;
 
+    private DatabaseReference BD = FirebaseDatabase.getInstance().getReference();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,29 +50,20 @@ public class Linhas extends AppCompatActivity {
         this.btnPerfil = findViewById(R.id.btnPerfil);
         this.listaLinhas = findViewById(R.id.listaLinhas);
 
-        this.adaptador = new AdapterLinhas(this, this.linhas);
+
 
         this.listaLinhas.setAdapter(adaptador);
 
-        this.btnLinha1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String nome = "Teste";
-                double valorPassagem = 4.88;
-                String rota = "do ponto A ao B";
-                ArrayList<String> pontosParada = new ArrayList<String>();
-                pontosParada.add("A");
-                pontosParada.add("B");
-                String horarioFuncionamento = "";
-                String diasFuncionamento = "";
+        DatabaseReference dados = BD.child("linha");
 
-                Linha linha = new Linha(nome, valorPassagem, rota, pontosParada, horarioFuncionamento, diasFuncionamento);
+        FirebaseListOptions<Linha> options = new FirebaseListOptions.Builder<Linha>()
+                .setLayout(R.layout.item_lista)
+                .setQuery(dados, Linha.class)
+                .setLifecycleOwner(this)
+                .build();
 
-                linhas.add(linha);
-
-                adaptador.notifyDataSetChanged();
-            }
-        });
+        adaptador = new AdapterLinhas(options);
+        dados.addValueEventListener(new EscutadorLinhas());
 
         this.btnPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,5 +80,27 @@ public class Linhas extends AppCompatActivity {
                 startActivity(i);
             }
         });
+    }
+
+    private class EscutadorLinhas implements ValueEventListener {
+        @Override
+        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+            if ( dataSnapshot.exists()) {
+                Toast.makeText(Linhas.this, "Linha: ", Toast.LENGTH_SHORT).show();
+
+                Linha l = dataSnapshot.getValue(Linha.class);
+
+                Linha linha = new Linha(l.getNome(), l.getValorPassagem(), l.getRota(), l.getPontosParada(), l.getHorarioFuncionamento(), l.getDiasFuncionamento());
+
+                linhas.add(linha);
+
+                adaptador.notifyDataSetChanged();
+
+            }
+        }
+
+        @Override
+        public void onCancelled(@NonNull DatabaseError databaseError) { }
     }
 }

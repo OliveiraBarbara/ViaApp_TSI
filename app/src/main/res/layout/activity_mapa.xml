@@ -75,8 +75,8 @@
             android:id="@+id/txtHorario3"
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
             android:background="@drawable/edit_text_border"
             android:clickable="false"
             android:editable="false"
@@ -90,7 +90,7 @@
             android:textAlignment="center"
             android:textColor="#003D50"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/view2"
+            app:layout_constraintEnd_toStartOf="@+id/txtHorario4"
             app:layout_constraintTop_toBottomOf="@+id/lProximosOnibus"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -98,7 +98,6 @@
             android:id="@+id/txtHorario4"
             android:layout_width="80dp"
             android:layout_height="40dp"
-            android:layout_marginStart="25dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/edit_text_border"
             android:clickable="false"
@@ -113,7 +112,8 @@
             android:textAlignment="center"
             android:textColor="#003D50"
             android:textSize="20sp"
-            app:layout_constraintStart_toEndOf="@+id/txtHorario3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lProximosOnibus"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -121,8 +121,8 @@
             android:id="@+id/txtHorario5"
             android:layout_width="80dp"
             android:layout_height="40dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="25dp"
             android:background="@drawable/edit_text_border"
             android:clickable="false"
             android:editable="false"
@@ -136,30 +136,7 @@
             android:textAlignment="center"
             android:textColor="#003D50"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/txtHorario6"
-            app:layout_constraintTop_toBottomOf="@+id/lProximosOnibus"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <TextView
-            android:id="@+id/txtHorario6"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/edit_text_border"
-            android:clickable="false"
-            android:editable="false"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:paddingLeft="10dp"
-            android:paddingTop="5dp"
-            android:paddingRight="10dp"
-            android:text="17:35"
-            android:textAlignment="center"
-            android:textColor="#003D50"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtHorario4"
             app:layout_constraintTop_toBottomOf="@+id/lProximosOnibus"
             tools:ignore="TouchTargetSizeCheck" />
 
