@@ -3,7 +3,6 @@ package com.example.viaapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -25,10 +24,6 @@ import java.util.ArrayList;
 public class Linhas extends AppCompatActivity {
 
     private EditText txtBuscar;
-    private Button btnLinha1;
-    private Button btnLinha2;
-    private Button btnLinha3;
-    private Button btnLinha4;
     private Button btnMenu;
     private Button btnPerfil;
     private ListView listaLinhas;
@@ -45,13 +40,9 @@ public class Linhas extends AppCompatActivity {
         setContentView(R.layout.activity_linhas);
 
         this.txtBuscar = findViewById(R.id.txtBuscar);
-        this.btnLinha1 = findViewById(R.id.btnLinhas);
         this.btnMenu = findViewById(R.id.btnMenu);
         this.btnPerfil = findViewById(R.id.btnPerfil);
-        this.listaLinhas = findViewById(R.id.listaLinhas);
-
-
-        this.listaLinhas.setAdapter(adaptador);
+        this.listaLinhas = findViewById(R.id.listaInfoLinha);
 
         DatabaseReference dados = BD.child("linha");
 
@@ -62,7 +53,12 @@ public class Linhas extends AppCompatActivity {
                 .build();
 
         adaptador = new AdapterLinhas(options);
+
+        this.listaLinhas.setAdapter(adaptador);
+
         dados.addValueEventListener(new EscutadorLinhas());
+
+        listaLinhas.setAdapter(adaptador);
 
         this.btnPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,14 +82,14 @@ public class Linhas extends AppCompatActivity {
         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
             if ( dataSnapshot.exists()) {
-                Toast.makeText(Linhas.this, "Linha: ", Toast.LENGTH_SHORT).show();
+
 
                 Linha l = dataSnapshot.getValue(Linha.class);
 
                 Linha linha = new Linha(l.getNome(), l.getValorPassagem(), l.getRota(), l.getPontosParada(), l.getHorarioFuncionamento(), l.getDiasFuncionamento());
 
                 linhas.add(linha);
-
+                Toast.makeText(Linhas.this, "Linha: " + l.getNome(), Toast.LENGTH_SHORT).show();
                 adaptador.notifyDataSetChanged();
 
             }

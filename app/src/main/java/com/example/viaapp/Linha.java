@@ -1,14 +1,19 @@
 package com.example.viaapp;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Linha {
+public class Linha implements Serializable {
     private String nome;
     private double valorPassagem;
     private String rota;
     private ArrayList<String> pontosParada;
     private String horarioFuncionamento;
     private String diasFuncionamento;
+
+    public Linha(){
+
+    }
 
     public Linha(String nome, double valorPassagem, String rota, ArrayList<String> pontosParada, String horarioFuncionamento, String diasFuncionamento) {
         this.nome = nome;

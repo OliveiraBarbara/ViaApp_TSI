@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lMenu" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNomeLinha" />
 
     <TextView
         android:id="@+id/lNomeApp"
@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@+id/lTextoSobre" />
 
     <TextView
-        android:id="@+id/lMenu"
+        android:id="@+id/txtNomeLinha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"

@@ -23,7 +23,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lMenu" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNomeLinha" />
 
         <TextView
             android:id="@+id/lValorPassagem"
@@ -42,7 +42,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="180dp"
             android:layout_height="55dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
             android:backgroundTint="#B0ECFF"
             android:drawableLeft="@drawable/rota"
             android:text="Ver Rota"
@@ -53,63 +53,11 @@
             android:theme="@style/Theme.Material3.DynamicColors.DayNight"
             app:iconSize="30dp"
             app:iconTint="@null"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lValorPassagem"
             app:strokeColor="#001F27" />
-
-        <TextView
-            android:id="@+id/txtPonto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-            android:drawableLeft="@drawable/proximo"
-            android:text="Estação Mogi das Cruzes"
-            android:textColor="#003D50"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lPontosDesembarque" />
-
-        <TextView
-            android:id="@+id/txtPonto2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-            android:drawableLeft="@drawable/proximo"
-            android:text="Estação Braz Cubas"
-            android:textColor="#003D50"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPonto" />
-
-        <TextView
-            android:id="@+id/txtPonto3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-            android:drawableLeft="@drawable/proximo"
-            android:text="Estação Jundiapeba"
-            android:textColor="#003D50"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPonto2" />
-
-        <TextView
-            android:id="@+id/txtPonto4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-            android:drawableLeft="@drawable/proximo"
-            android:text="Estação Suzano"
-            android:textColor="#003D50"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPonto3" />
 
         <TextView
             android:id="@+id/txtHorario3"
@@ -147,7 +95,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lEstacaoInicial" />
+            app:layout_constraintTop_toTopOf="@+id/view" />
 
         <TextView
             android:id="@+id/lHorarioFuncionamento"
@@ -159,19 +107,7 @@
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPonto4" />
-
-        <TextView
-            android:id="@+id/txtEstacaoInicial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
-            android:text="Estudantes"
-            android:textColor="#003D50"
-            android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/lEstacaoInicial"
-            app:layout_constraintTop_toTopOf="@+id/view" />
+            app:layout_constraintTop_toBottomOf="@+id/listaInfoLinha" />
 
         <TextView
             android:id="@+id/txtValorPassagem"
@@ -184,18 +120,6 @@
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/lValorPassagem"
             app:layout_constraintTop_toBottomOf="@+id/txtHorario2" />
-
-        <TextView
-            android:id="@+id/lEstacaoInicial"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
-            android:text="Estação Inicial:"
-            android:textColor="#003D50"
-            android:textSize="24sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view" />
 
         <View
             android:id="@+id/view2"
@@ -250,17 +174,31 @@
             app:strokeWidth="0dp" />
 
         <TextView
-            android:id="@+id/lMenu"
+            android:id="@+id/txtNomeLinha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
-            android:text="Linha Laranja"
+            android:text="Linha "
             android:textColor="#FFFFFF"
             android:textSize="34sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ListView
+            android:id="@+id/listaInfoLinha"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="290dp"
+            android:background="#B0ECFF"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/view" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
