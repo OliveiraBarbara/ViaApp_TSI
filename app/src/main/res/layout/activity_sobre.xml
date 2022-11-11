@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtNomeLinha" />
 
     <TextView
-        android:id="@+id/lNomeApp"
+        android:id="@+id/txtPerfilNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -65,7 +65,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lNomeApp" />
+        app:layout_constraintTop_toBottomOf="@+id/txtPerfilNome" />
 
     <TextView
         android:id="@+id/lTextoDesenvolvido"

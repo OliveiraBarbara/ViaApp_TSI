@@ -65,15 +65,15 @@ public class Cadastro extends AppCompatActivity {
             DatabaseReference usuariosBd = BD.child("usuario");
 
             Usuario usuario = new Usuario(nome, telefone, email, senha);
-            String chave = usuariosBd.push().getKey();
-            usuariosBd.child(chave).setValue(usuario);
-
 
             usuarios.createUserWithEmailAndPassword(email, senha).addOnCompleteListener(Cadastro.this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
                         Toast.makeText(Cadastro.this, "Usuário criado e logado com sucesso!", Toast.LENGTH_SHORT).show();
+
+                        String chave = usuariosBd.push().getKey();
+                        usuariosBd.child(usuarios.getCurrentUser().getUid()).setValue(usuario);
 
                         Intent i = new Intent(getApplicationContext(), Linhas.class);
                         startActivity(i);

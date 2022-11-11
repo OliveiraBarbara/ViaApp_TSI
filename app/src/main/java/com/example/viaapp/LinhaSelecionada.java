@@ -61,8 +61,6 @@ public class LinhaSelecionada extends AppCompatActivity {
         txtDiaFunc.setText(linha.getDiasFuncionamento());
         txtValorPassagem.setText(Double.toString(linha.getValorPassagem()));
 
-        //Utility.setListViewHeightBasedOnChildren(listaInfoLinha);
-
         this.btnVerRota.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -88,28 +86,5 @@ public class LinhaSelecionada extends AppCompatActivity {
         });
 
         Utility.setListViewHeightBasedOnChildren(listaInfoLinha);
-    }
-
-    public static class Utility {
-        public static void setListViewHeightBasedOnChildren(ListView listView) {
-            ListAdapter listAdapter = listView.getAdapter();
-            if (listAdapter == null) {
-                // pre-condition
-                return;
-            }
-
-            int totalHeight = 0;
-            int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.AT_MOST);
-            for (int i = 0; i < listAdapter.getCount(); i++) {
-                View listItem = listAdapter.getView(i, null, listView);
-                listItem.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
-                totalHeight += listItem.getMeasuredHeight();
-            }
-
-            ViewGroup.LayoutParams params = listView.getLayoutParams();
-            params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
-            listView.setLayoutParams(params);
-            listView.requestLayout();
-        }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.viaapp;
 
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
@@ -29,5 +30,6 @@ public class Utility {
         ViewGroup.LayoutParams params = listView.getLayoutParams();
         params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
         listView.setLayoutParams(params);
+        listView.setBackground(Drawable.createFromPath("@drawable/edit_table_border"));
     }
 }

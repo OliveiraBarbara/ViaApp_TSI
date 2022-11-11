@@ -83,15 +83,11 @@ public class Linhas extends AppCompatActivity {
 
             if ( dataSnapshot.exists()) {
 
-
                 Linha l = dataSnapshot.getValue(Linha.class);
-
                 Linha linha = new Linha(l.getNome(), l.getValorPassagem(), l.getRota(), l.getPontosParada(), l.getHorarioFuncionamento(), l.getDiasFuncionamento());
 
                 linhas.add(linha);
-                Toast.makeText(Linhas.this, "Linha: " + l.getNome(), Toast.LENGTH_SHORT).show();
                 adaptador.notifyDataSetChanged();
-
             }
         }
 

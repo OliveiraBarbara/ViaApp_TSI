@@ -120,12 +120,14 @@
                     android:id="@+id/lPontosDesembarque"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/edit_table_border"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
                     android:text="Pontos de Embarque:"
                     android:textColor="#003D50"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.423"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -148,10 +150,12 @@
                             android:id="@+id/listaInfoLinha"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:layout_marginStart="10dp"
                             android:layout_marginTop="8dp"
+                            android:layout_marginEnd="10dp"
                             android:background="#B0ECFF"
-                            android:paddingLeft="40dp"
-                            android:paddingRight="40dp" />
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp" />
                     </LinearLayout>
                 </androidx.core.widget.NestedScrollView>
 
@@ -160,6 +164,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:background="@drawable/edit_table_border"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
                     android:text="Horário de Funcionamento:"
                     android:textColor="#003D50"
                     android:textSize="24sp"
@@ -195,25 +202,40 @@
                     android:id="@+id/txtValorPassagem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:text="4,90"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:text="0,00"
                     android:textColor="#003D50"
                     android:textSize="24sp"
-                    app:layout_constraintStart_toEndOf="@+id/lValorPassagem"
-                    app:layout_constraintTop_toBottomOf="@+id/txtDiaFunc" />
+                    app:layout_constraintStart_toEndOf="@+id/lSifrao"
+                    app:layout_constraintTop_toBottomOf="@+id/lValorPassagem" />
 
                 <TextView
                     android:id="@+id/lValorPassagem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="20dp"
-                    android:text="Valor da Passagem: R$"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/edit_table_border"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:text="Valor da Passagem:"
+                    android:textColor="#003D50"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDiaFunc" />
+
+                <TextView
+                    android:id="@+id/lSifrao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="160dp"
+                    android:layout_marginTop="10dp"
+                    android:text="R$"
                     android:textColor="#003D50"
                     android:textSize="24sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtDiaFunc" />
+                    app:layout_constraintTop_toBottomOf="@+id/lValorPassagem" />
 
                 <Button
                     android:id="@+id/btnVerRota"
@@ -234,7 +256,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/lValorPassagem"
+                    app:layout_constraintTop_toBottomOf="@+id/lSifrao"
                     app:strokeColor="#001F27" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
