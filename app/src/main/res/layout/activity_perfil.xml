@@ -25,6 +25,30 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNomeLinha" />
 
+        <Button
+            android:id="@+id/btnSair"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            android:layout_width="230dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="#FFDAD6"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp"
+            android:text="Sair"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#601410"
+            android:textSize="20sp"
+            android:theme="@style/Theme.Material3.DynamicColors.DayNight"
+            app:icon="@drawable/sair"
+            app:iconSize="30dp"
+            app:iconTint="@null"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPerfilTelefone"
+            app:strokeColor="#601410" />
+
         <TextView
             android:id="@+id/txtPerfilEmail"
             android:layout_width="331dp"

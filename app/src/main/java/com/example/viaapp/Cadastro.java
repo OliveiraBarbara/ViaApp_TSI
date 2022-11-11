@@ -34,8 +34,6 @@ public class Cadastro extends AppCompatActivity {
 
     private FirebaseAuth usuarios = FirebaseAuth.getInstance();
 
-    //UsuariosAdapter adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,9 +46,6 @@ public class Cadastro extends AppCompatActivity {
         btnNovoCadastro = findViewById(R.id.btnNovoCadastro);
 
         btnNovoCadastro.setOnClickListener(new EscutadorBotaoNovo());
-
-        /*DatabaseReference usuario = BD.child("usuario");
-        usuario.addValueEventListener(new EscutadorInserir());*/
 
     }
 
@@ -77,6 +72,7 @@ public class Cadastro extends AppCompatActivity {
 
                         Intent i = new Intent(getApplicationContext(), Linhas.class);
                         startActivity(i);
+                        finish();
                     }else{
                         FirebaseAuthException exception = (FirebaseAuthException) task.getException();
                         Toast.makeText(Cadastro.this, "Erro: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
@@ -85,22 +81,4 @@ public class Cadastro extends AppCompatActivity {
             });
         }
     }
-
-    // classe interna, escutador do botão Inserir
-    /*private class EscutadorInserir implements ValueEventListener {
-        @Override
-        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-            // Os dados recuperados no Firebase vem dentro de um DataSnapshot.
-            // No nosso caso, só vai ter um objeto lá dentro (objeto da classe Usuario).
-            // Precisamos testar se veio alguma informação, isto é, se o dataSnapshot existe...
-            if ( dataSnapshot.exists()) {
-                // Recuperamos o objeto Usuario que veio dentro do dataSnapshot:
-                Usuario u = dataSnapshot.getValue(Usuario.class);
-
-            }
-        }
-
-        @Override
-        public void onCancelled(@NonNull DatabaseError databaseError) { }
-    }*/
 }

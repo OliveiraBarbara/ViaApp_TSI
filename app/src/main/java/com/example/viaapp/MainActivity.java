@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Login.class);
                 startActivity(i);
+                finish();
             }
         });
 
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Cadastro.class);
                 startActivity(i);
+                finish();
             }
         });
     }

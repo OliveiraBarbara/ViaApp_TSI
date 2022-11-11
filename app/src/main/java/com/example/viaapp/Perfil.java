@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Perfil extends AppCompatActivity {
 
     private Button btnMenu;
-    private Button btnPerfil;
+    private Button btnSair;
     private TextView txtPerfilEmail;
     private TextView txtPerfilNome;
     private TextView txtPerfilTelefone;
@@ -34,7 +34,7 @@ public class Perfil extends AppCompatActivity {
         setContentView(R.layout.activity_perfil);
 
         this.btnMenu = findViewById(R.id.btnMenu);
-        this.btnPerfil = findViewById(R.id.btnPerfil);
+        this.btnSair = findViewById(R.id.btnSair);
         this.txtPerfilEmail = findViewById(R.id.txtPerfilEmail);
         this.txtPerfilNome = findViewById(R.id.txtPerfilNome);
         this.txtPerfilTelefone = findViewById(R.id.txtPerfilTelefone);
@@ -49,6 +49,16 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Menu.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        this.btnSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                usuario.signOut();
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
                 finish();
             }

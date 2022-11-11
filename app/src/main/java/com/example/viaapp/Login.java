@@ -54,6 +54,7 @@ public class Login extends AppCompatActivity {
 
                         Intent i = new Intent(getApplicationContext(), Linhas.class);
                         startActivity(i);
+                        finish();
                     }else{
                         FirebaseAuthException exception = (FirebaseAuthException) task.getException();
                         Toast.makeText(Login.this, "Erro: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
