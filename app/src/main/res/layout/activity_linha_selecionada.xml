@@ -8,10 +8,10 @@
     android:fillViewport="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        tools:context=".LinhaSelecionada"
-        android:background="#00687C">
+        android:background="#00687C"
+        tools:context=".LinhaSelecionada">
 
         <View
             android:id="@+id/view"
@@ -101,13 +101,13 @@
             android:id="@+id/lHorarioFuncionamento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginBottom="180dp"
             android:text="Horário de Funcionamento:"
             android:textColor="#003D50"
             android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/btnVerRota"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listaInfoLinha" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/txtValorPassagem"
@@ -190,15 +190,14 @@
             android:id="@+id/listaInfoLinha"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="290dp"
+            android:layout_marginTop="10dp"
             android:background="#B0ECFF"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
-            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintBottom_toTopOf="@+id/lHorarioFuncionamento"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view" />
+            app:layout_constraintTop_toBottomOf="@+id/lPontosDesembarque" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
