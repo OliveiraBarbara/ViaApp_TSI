@@ -20,6 +20,10 @@ public class LinhaSelecionada extends AppCompatActivity {
     private Button btnPerfil;
 
     private TextView txtNomeLinha;
+    private TextView txtHorario;
+    private TextView txtDiaFunc;
+    private TextView txtValorPassagem;
+
     private ListView listaInfoLinha;
 
     private Linha linha;
@@ -35,6 +39,10 @@ public class LinhaSelecionada extends AppCompatActivity {
         this.btnMenu = findViewById(R.id.btnMenu);
         this.btnPerfil = findViewById(R.id.btnPerfil);
         this.txtNomeLinha = findViewById(R.id.txtNomeLinha);
+        this.txtHorario = findViewById(R.id.txtHorario3);
+        this.txtDiaFunc = findViewById(R.id.txtDiaFunc);
+        this.txtValorPassagem = findViewById(R.id.txtValorPassagem);
+
         this.listaInfoLinha = findViewById(R.id.listaInfoLinha);
 
         // Recuperando o objeto Intent que criou esta activity
@@ -49,8 +57,11 @@ public class LinhaSelecionada extends AppCompatActivity {
 
         // Colocando as informações recuperadas na interface gráfica
         txtNomeLinha.setText("Linha " + linha.getNome());
+        txtHorario.setText(linha.getHorarioFuncionamento());
+        txtDiaFunc.setText(linha.getDiasFuncionamento());
+        txtValorPassagem.setText(Double.toString(linha.getValorPassagem()));
 
-        Utility.setListViewHeightBasedOnChildren(listaInfoLinha);
+        //Utility.setListViewHeightBasedOnChildren(listaInfoLinha);
 
         this.btnVerRota.setOnClickListener(new View.OnClickListener() {
             @Override

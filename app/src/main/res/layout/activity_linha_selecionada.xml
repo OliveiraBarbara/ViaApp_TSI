@@ -35,7 +35,7 @@
             android:textColor="#003D50"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtHorario2" />
+            app:layout_constraintTop_toBottomOf="@+id/txtDiaFunc" />
 
         <Button
             android:id="@+id/btnVerRota"
@@ -66,20 +66,18 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
             android:drawableLeft="@drawable/proximo"
-            android:text="4h40 às 00h10"
             android:textColor="#003D50"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lHorarioFuncionamento" />
 
         <TextView
-            android:id="@+id/txtHorario2"
+            android:id="@+id/txtDiaFunc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
             android:drawableLeft="@drawable/proximo"
-            android:text="Todos os dias"
             android:textColor="#003D50"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Pontos de Desembarque:"
+            android:text="Pontos de Embarque:"
             android:textColor="#003D50"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -119,7 +117,7 @@
             android:textColor="#003D50"
             android:textSize="24sp"
             app:layout_constraintStart_toEndOf="@+id/lValorPassagem"
-            app:layout_constraintTop_toBottomOf="@+id/txtHorario2" />
+            app:layout_constraintTop_toBottomOf="@+id/txtDiaFunc" />
 
         <View
             android:id="@+id/view2"
