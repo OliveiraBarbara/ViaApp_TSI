@@ -86,6 +86,8 @@ public class LinhaSelecionada extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        Utility.setListViewHeightBasedOnChildren(listaInfoLinha);
     }
 
     public static class Utility {
