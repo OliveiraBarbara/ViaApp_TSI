@@ -71,7 +71,6 @@ public class Perfil extends AppCompatActivity {
 
             if ( dataSnapshot.exists()) {
                 Usuario u = dataSnapshot.getValue(Usuario.class);
-                Toast.makeText(Perfil.this, "Usuário: " + u.getEmail(), Toast.LENGTH_SHORT).show();
                 txtPerfilNome.setText(u.getNome());
                 txtPerfilTelefone.setText(u.getTelefone());
             }

@@ -65,10 +65,10 @@ public class Cadastro extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(Cadastro.this, "Usuário criado e logado com sucesso!", Toast.LENGTH_SHORT).show();
 
-                        String chave = usuariosBd.push().getKey();
                         usuariosBd.child(usuarios.getCurrentUser().getUid()).setValue(usuario);
+
+                        Toast.makeText(Cadastro.this, "Usuário criado e logado com sucesso!", Toast.LENGTH_SHORT).show();
 
                         Intent i = new Intent(getApplicationContext(), Linhas.class);
                         startActivity(i);

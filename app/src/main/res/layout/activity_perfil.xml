@@ -110,12 +110,15 @@
             android:id="@+id/txtPerfilNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
             android:layout_marginTop="55dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textAlignment="center"
             android:textColor="#003D50"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@+id/imgPerfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/mapFragment" />
 
         <TextView
@@ -123,12 +126,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="70dp"
             android:text="E-mail"
             android:textColor="#003D50"
             android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imgPerfil" />
+            app:layout_constraintTop_toBottomOf="@+id/txtPerfilNome" />
 
         <TextView
             android:id="@+id/lTextoSobre"
@@ -195,17 +198,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/imgPerfil"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/img_perfil"
-            app:civ_border_color="#003D50"
-            app:civ_border_width="1dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/mapFragment" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>
