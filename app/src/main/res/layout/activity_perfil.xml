@@ -14,7 +14,7 @@
         android:background="#00687C">
 
         <View
-            android:id="@+id/view"
+            android:id="@+id/mapFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
@@ -99,7 +99,7 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:background="@drawable/edit_view_inferior_border"
-            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@+id/mapFragment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +116,7 @@
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@+id/imgPerfil"
-            app:layout_constraintTop_toTopOf="@+id/view" />
+            app:layout_constraintTop_toTopOf="@+id/mapFragment" />
 
         <TextView
             android:id="@+id/lEmail"
@@ -205,7 +205,7 @@
             app:civ_border_color="#003D50"
             app:civ_border_width="1dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view" />
+            app:layout_constraintTop_toTopOf="@+id/mapFragment" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

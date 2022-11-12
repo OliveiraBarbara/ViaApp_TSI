@@ -39,8 +39,6 @@ public class AdapterLinhas extends FirebaseListAdapter<Linha> {
         btnLinha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(v.getContext(), "linha selecionada!", Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(v.getContext(), LinhaSelecionada.class);
                 intent.putExtra("linha", l);
                 v.getContext().startActivity(intent);

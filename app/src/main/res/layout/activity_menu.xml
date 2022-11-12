@@ -8,7 +8,7 @@
     tools:context=".Menu">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/mapFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
@@ -88,7 +88,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/mapFragment"
         app:strokeColor="#00687C" />
 
     <TextView

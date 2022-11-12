@@ -14,7 +14,7 @@
         tools:context=".Linhas">
 
         <View
-            android:id="@+id/view"
+            android:id="@+id/mapFragment"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="8dp"
@@ -30,7 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:background="@drawable/edit_view_inferior_border"
-            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintBottom_toBottomOf="@+id/mapFragment"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +106,7 @@
             android:textAlignment="textStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/view" />
+            app:layout_constraintTop_toTopOf="@+id/mapFragment" />
 
         <ListView
             android:id="@+id/listaInfoLinha"
