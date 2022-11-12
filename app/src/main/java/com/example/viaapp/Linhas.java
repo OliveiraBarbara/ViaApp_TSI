@@ -45,13 +45,11 @@ public class Linhas extends AppCompatActivity {
         this.listaLinhas = findViewById(R.id.listaInfoLinha);
 
         DatabaseReference dados = BD.child("linha");
-
         FirebaseListOptions<Linha> options = new FirebaseListOptions.Builder<Linha>()
                 .setLayout(R.layout.item_lista)
                 .setQuery(dados, Linha.class)
                 .setLifecycleOwner(this)
                 .build();
-
         adaptador = new AdapterLinhas(options);
 
         this.listaLinhas.setAdapter(adaptador);
@@ -84,8 +82,7 @@ public class Linhas extends AppCompatActivity {
             if ( dataSnapshot.exists()) {
 
                 Linha l = dataSnapshot.getValue(Linha.class);
-                Linha linha = new Linha(l.getNome(), l.getValorPassagem(), l.getRota(), l.getPontosParada(), l.getHorarioFuncionamento(), l.getDiasFuncionamento());
-
+                Linha linha = new Linha(l.getNome(), l.getValorPassagem(), l.getPontosParada(), l.getHorarioFuncionamento(), l.getDiasFuncionamento());
                 linhas.add(linha);
                 adaptador.notifyDataSetChanged();
             }

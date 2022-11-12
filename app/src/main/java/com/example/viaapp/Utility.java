@@ -7,6 +7,8 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class Utility {
     public static void setListViewHeightBasedOnChildren(ListView listView) {
         ListAdapter listAdapter = listView.getAdapter();
@@ -31,5 +33,21 @@ public class Utility {
         params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
         listView.setLayoutParams(params);
         listView.setBackground(Drawable.createFromPath("@drawable/edit_table_border"));
+    }
+
+    public static ArrayList<String> preencheArrayString(ArrayList<Ponto> arrayList){
+        ArrayList<String> arrayString = new ArrayList<>();
+        for(Ponto item : arrayList){
+            arrayString.add(item.getNome());
+        }
+        return arrayString;
+    }
+
+    public static String concatenaHorarios(Linha linha){
+        String horarios = "";
+        for(int j = 0; j < linha.getHorarioFuncionamento().size(); j++){
+            horarios += linha.getHorarioFuncionamento().get(j) + " / ";
+        }
+        return horarios;
     }
 }

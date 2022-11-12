@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,16 +49,17 @@ public class LinhaSelecionada extends AppCompatActivity {
         // Recuperando o objeto Intent que criou esta activity
         Intent i = getIntent();
 
-        // Recuperando o objeto Pessoa que foi armazenado dentro do intent
+        // Recuperando o objeto Linha que foi armazenado dentro do intent
         this.linha = (Linha) i.getSerializableExtra("linha");
 
-        this.adaptador = new AdapterLinhaSelecionada(this, linha.getPontosParada());
+        this.adaptador = new AdapterLinhaSelecionada(this, Utility.preencheArrayString(linha.getPontosParada()));
 
         this.listaInfoLinha.setAdapter(adaptador);
 
         // Colocando as informações recuperadas na interface gráfica
-        txtNomeLinha.setText("Linha " + linha.getNome());
-        txtHorario.setText(linha.getHorarioFuncionamento());
+        txtNomeLinha.setText(linha.getNome());
+
+        txtHorario.setText(Utility.concatenaHorarios(linha));
         txtDiaFunc.setText(linha.getDiasFuncionamento());
         txtValorPassagem.setText(Double.toString(linha.getValorPassagem()));
 
@@ -65,6 +67,7 @@ public class LinhaSelecionada extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), Mapa.class);
+                i.putExtra("linha", linha);
                 startActivity(i);
             }
         });

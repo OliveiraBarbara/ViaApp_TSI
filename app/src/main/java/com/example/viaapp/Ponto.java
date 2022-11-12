@@ -1,15 +1,25 @@
 package com.example.viaapp;
 
+import android.widget.Toast;
+
 import com.google.android.gms.maps.model.LatLng;
 
-public class Ponto {
+import java.io.Serializable;
+
+public class Ponto implements Serializable {
     private String nome;
-    private LatLng latLng;
+    private double latitude;
+    private double longitude;
     private String endereco;
 
-    public Ponto(String nome, LatLng latLng, String endereco) {
+    public Ponto(){
+
+    }
+
+    public Ponto(String nome, double latitude, double longitude, String endereco) {
         this.nome = nome;
-        this.latLng = latLng;
+        this.latitude = latitude;
+        this.longitude = longitude;
         this.endereco = endereco;
     }
 
@@ -21,19 +31,15 @@ public class Ponto {
         this.nome = nome;
     }
 
-    public LatLng getLatLng() {
-        return latLng;
+    public double getLatitude() {
+        return latitude;
     }
 
-    public void setLatLng(LatLng latLng) {
-        this.latLng = latLng;
+    public double getLongitude() {
+        return longitude;
     }
 
     public String getEndereco() {
         return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
     }
 }

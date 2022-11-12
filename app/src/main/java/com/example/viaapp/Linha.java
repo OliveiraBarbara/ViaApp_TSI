@@ -6,19 +6,17 @@ import java.util.ArrayList;
 public class Linha implements Serializable {
     private String nome;
     private double valorPassagem;
-    private String rota;
-    private ArrayList<String> pontosParada;
-    private String horarioFuncionamento;
+    private ArrayList<Ponto> pontosParada;
+    private ArrayList<String> horarioFuncionamento;
     private String diasFuncionamento;
 
     public Linha(){
 
     }
 
-    public Linha(String nome, double valorPassagem, String rota, ArrayList<String> pontosParada, String horarioFuncionamento, String diasFuncionamento) {
+    public Linha(String nome, double valorPassagem, ArrayList<Ponto> pontosParada, ArrayList<String> horarioFuncionamento, String diasFuncionamento) {
         this.nome = nome;
         this.valorPassagem = valorPassagem;
-        this.rota = rota;
         this.pontosParada = pontosParada;
         this.horarioFuncionamento = horarioFuncionamento;
         this.diasFuncionamento = diasFuncionamento;
@@ -40,27 +38,19 @@ public class Linha implements Serializable {
         this.valorPassagem = valorPassagem;
     }
 
-    public String getRota() {
-        return rota;
-    }
-
-    public void setRota(String rota) {
-        this.rota = rota;
-    }
-
-    public ArrayList<String> getPontosParada() {
+    public ArrayList<Ponto> getPontosParada() {
         return pontosParada;
     }
 
-    public void setPontosParada(ArrayList<String> pontosParada) {
+    public void setPontosParada(ArrayList<Ponto> pontosParada) {
         this.pontosParada = pontosParada;
     }
 
-    public String getHorarioFuncionamento() {
+    public ArrayList<String> getHorarioFuncionamento() {
         return horarioFuncionamento;
     }
 
-    public void setHorarioFuncionamento(String horarioFuncionamento) {
+    public void setHorarioFuncionamento(ArrayList<String> horarioFuncionamento) {
         this.horarioFuncionamento = horarioFuncionamento;
     }
 

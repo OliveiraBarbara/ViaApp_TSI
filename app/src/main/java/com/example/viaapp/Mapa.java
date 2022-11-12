@@ -29,8 +29,14 @@ import java.util.ArrayList;
 
 public class Mapa extends AppCompatActivity {
 
+    private TextView txtNomeLinha;
+    private TextView txtHorario3;
+    private TextView txtHorario4;
+    private TextView txtHorario5;
     private Button btnMenu3;
     private SupportMapFragment mapFragment;
+
+    private Linha linha;
 
     // -20.7821109,-51.6683511 Av. Ranulpho Marques Leal, 3484 - Interlagos, Três Lagoas - MS
     // -20.7749812,-51.698669 Av. Antônio Trajano, 2180 - Centro, Três Lagoas - MS
@@ -41,11 +47,26 @@ public class Mapa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mapa);
 
-        pontos.add(new Ponto("UFMS", new LatLng(-20.7821109,-51.6683511), "Av. Ranulpho Marques Leal, 3484 - Interlagos, Três Lagoas - MS"));
-        pontos.add(new Ponto("Terminal Rodoviário", new LatLng(-20.7749812,-51.698669), "Av. Antônio Trajano, 2180 - Centro, Três Lagoas - MS"));
+        Intent i = getIntent();
+        this.linha = (Linha) i.getSerializableExtra("linha");
+
+        pontos = linha.getPontosParada();
+
+        this.txtNomeLinha = findViewById(R.id.txtNomeLinha);
+        txtNomeLinha.setText(linha.getNome());
+
+        this.txtHorario3 = findViewById(R.id.txtHorario3);
+        this.txtHorario4 = findViewById(R.id.txtHorario4);
+        this.txtHorario5 = findViewById(R.id.txtHorario5);
+
+        txtHorario3.setText(linha.getHorarioFuncionamento().get(0));
+        txtHorario4.setText(linha.getHorarioFuncionamento().get(1));
+        txtHorario5.setText(linha.getHorarioFuncionamento().get(2));
 
         this.btnMenu3 = findViewById(R.id.btnMenu3);
         this.mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapFragment);
+
+
 
         this.mapFragment.getMapAsync(new OnMapReadyCallback() {
             @Override
@@ -60,7 +81,8 @@ public class Mapa extends AppCompatActivity {
                         googleMap.snapshot(new GoogleMap.SnapshotReadyCallback() {
                             @Override
                             public void onSnapshotReady(Bitmap bitmap) {
-                                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(pontos.get(0).getLatLng(), 13));
+                                LatLng latLng = new LatLng(pontos.get(0).getLatitude(), pontos.get(0).getLongitude());
+                                googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
                             }
                         });
                     }
@@ -83,9 +105,8 @@ public class Mapa extends AppCompatActivity {
             MarkerOptions markerOptions = new MarkerOptions();
             markerOptions.title(p.getNome());
             markerOptions.snippet(p.getEndereco());
-            markerOptions.position(p.getLatLng());
+            markerOptions.position(new LatLng(p.getLatitude(), p.getLongitude()));
             markerOptions.icon(BitmapHelper.vetorToBitmap(this, R.drawable.ponto_parada));
-
             Marker marker = googleMap.addMarker(markerOptions);
             marker.setTag(p);
         }
