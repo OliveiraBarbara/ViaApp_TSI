@@ -25,6 +25,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNomeLinha" />
 
+        <TextView
+            android:id="@+id/lTextoInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_table_border"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:text="Selecione uma linha:"
+            android:textAlignment="center"
+            android:textColor="#003D50"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/mapFragment" />
+
         <View
             android:id="@+id/view2"
             android:layout_width="0dp"
@@ -42,6 +58,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginEnd="4dp"
             android:backgroundTint="#FFFFFF"
             android:text="Perfil"
             android:textAlignment="center"
@@ -62,6 +79,7 @@
             style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:layout_marginStart="4dp"
             android:backgroundTint="#FFFFFF"
             android:text="Menu"
             android:textAlignment="center"
@@ -90,25 +108,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/txtBuscar"
-            android:layout_width="290dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/edit_barra_busca_border"
-            android:drawableRight="@drawable/lupa"
-            android:ems="10"
-            android:hint="Buscar"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:textAlignment="textStart"
-            android:textColor="#001F27"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/mapFragment" />
-
         <ListView
             android:id="@+id/listaInfoLinha"
             android:layout_width="0dp"
@@ -118,7 +117,7 @@
             app:layout_constraintBottom_toTopOf="@+id/view2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtBuscar" />
+            app:layout_constraintTop_toBottomOf="@+id/lTextoInfo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

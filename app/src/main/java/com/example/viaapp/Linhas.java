@@ -23,7 +23,6 @@ import java.util.ArrayList;
 
 public class Linhas extends AppCompatActivity {
 
-    private EditText txtBuscar;
     private Button btnMenu;
     private Button btnPerfil;
     private ListView listaLinhas;
@@ -39,7 +38,6 @@ public class Linhas extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_linhas);
 
-        this.txtBuscar = findViewById(R.id.txtBuscar);
         this.btnMenu = findViewById(R.id.btnMenu);
         this.btnPerfil = findViewById(R.id.btnPerfil);
         this.listaLinhas = findViewById(R.id.listaInfoLinha);
